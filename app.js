@@ -449,7 +449,7 @@ app.get('/v001/appliances/:userID/:applianceID', authenticate, function (req, re
 /* Takes "version" as a header, ex:                  */
 /*   "version":"v001"                                */
 /*****************************************************/
-app.del("/v001/appliances/:userID/:applianceID", authenticate, function (req, res)
+app.delete("/v001/appliances/:userID/:applianceID", authenticate, function (req, res)
 {
 		request({
 		url: (regionURL + 'v001/appliances/'+ req.params.userID + '/' + req.params.applianceID),
@@ -788,7 +788,7 @@ app.get("/appliances/:userID/:applianceID", passport.authenticate('mca-backend-s
 /* Route to delete appliance records                           */
 /*    Internal API					       */
 /***************************************************************/
-app.del("/appliances/:userID/:applianceID", passport.authenticate('mca-backend-strategy', {session: false }), function (req, res)
+app.delete("/appliances/:userID/:applianceID", passport.authenticate('mca-backend-strategy', {session: false }), function (req, res)
 {
 
 	//verify that userID coming in MCA matches doc userID
