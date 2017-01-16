@@ -1,0 +1,13 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: iottestHB
+  host: iottestHB
+  disk_quota: 1024M
+  services:
+  - iottestHB-ibm-iot-for-electronics
+  - iottestHB-iotf-service
+  - iottestHB-IoT Real-Time Insight
+  - iottestHB-AdvancedMobileAccess
